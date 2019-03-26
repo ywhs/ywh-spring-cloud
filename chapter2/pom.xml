@@ -26,6 +26,7 @@
 	<modules>
 		<module>eureka-server</module>
 		<module>eureka-hi</module>
+		<module>service-ribbon</module>
 	</modules>
 
 	<dependencies>
