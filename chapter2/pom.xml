@@ -29,6 +29,7 @@
 		<module>service-ribbon</module>
 	</modules>
 
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
