@@ -1,0 +1,14 @@
+# \u7AEF\u53E3\u53F7\u914D\u7F6E
+server:
+  port: 8762
+# spring\u9879\u76EE\u7684\u540D\u79F0
+spring:
+  application:
+    name: eureka-hi
+
+# eureka\u7684\u5BA2\u6237\u7AEF\u914D\u7F6E
+eureka:
+  client:
+    service-url:
+      url: http://localhost:8761/eureka/
+
