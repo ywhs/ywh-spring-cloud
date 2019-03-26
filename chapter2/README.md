@@ -52,6 +52,15 @@ Ribbon主要包含如下组件：
 
 关于什么是负载均衡，我的理解为，有两台机器做同一件事情，当有一台机器不工作时，也不会导致全线崩溃。
 
+## 此时的架构
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190326183911389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2OTU2MTU0,size_16,color_FFFFFF,t_70)
+
+- 一个服务注册中心，eureka server,端口为8761
+- service-hi工程跑了两个实例，端口分别为8762,8763，分别向服务注册中心注册
+- sercvice-ribbon端口为8764,向服务注册中心注册
+- 当sercvice-ribbon通过restTemplate调用service-hi的hi接口时，因为用ribbon进行了负载均衡，会轮流的调用service-hi：8762和8763 两个端口的hi接口；
+
 
 参考：
 - [史上最简单的SpringCloud教程 | 第二篇: 服务消费者（rest+ribbon）(Finchley版本)](https://blog.csdn.net/forezp/article/details/81040946)
