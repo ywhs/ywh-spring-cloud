@@ -38,7 +38,7 @@ Netflix开源了Hystrix组件，实现了断路器模式，SpringCloud对这一�
 - 此时关闭 service-hi 工程，当我们再访问http://localhost:8764/hi?name=ywh，浏览器会显示
 > hi ,ywh, orry, error
 
-这就说明当 service-hi 工程不可用的时候，service-ribbon调用 service-hi的API接口时，会执行快速失败，直接返回一组字符串，而不是等待响应超时，这很好的控制了容器的线程阻塞。
+这就说明当 service-hi 工程不可用的时候，eureka-ribbon调用 service-hi的API接口时，会执行快速失败，直接返回一组字符串，而不是等待响应超时，这很好的控制了容器的线程阻塞。
 
 ## 采用Feign实现熔断（过载保护）
 
@@ -49,6 +49,8 @@ Feign是自带断路器的，在D版本的Spring Cloud之后，它没有默认�
 
 - SchedualServiceHiHystric需要实现SchedualServiceHi 接口，并注入到Ioc容器中
 > 这个实现可以作为错误的处理,好比如前端访问后端时,返回一个500状态码,前端需要做处理一样
+
+
 参考：
 - [史上最简单的SpringCloud教程 | 第四篇:断路器（Hystrix）(Finchley版本)](https://blog.csdn.net/forezp/article/details/81040990)
 
