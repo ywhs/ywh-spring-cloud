@@ -1,0 +1,15 @@
+# 端口号
+server:
+  port: 8762
+# spring项目名称
+spring:
+  application:
+    name: eureka-hi
+
+# eureka 配置
+eureka:
+  client:
+    service-url:
+      # 这个url的取什么名字都可以
+      url: http://localhost:8761/eureka/
+

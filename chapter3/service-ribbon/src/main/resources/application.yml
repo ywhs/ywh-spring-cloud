@@ -1,0 +1,9 @@
+server:
+  port: 8764
+eureka:
+  client:
+    service-url:
+     url: http://localhost:8761/eureka
+spring:
+  application:
+    name: service-ribbon
