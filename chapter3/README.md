@@ -30,13 +30,13 @@ Netflix开源了Hystrix组件，实现了断路器模式，SpringCloud对这一�
 
 - 在程序的启动类ServiceRibbonApplication 加@EnableHystrix注解开启Hystrix
 
-- 改造HelloService类，在hiService方法上加上@HystrixCommand注解。该注解对该方法创建了熔断器的功能，并指定了fallbackMethod熔断方法，熔断方法直接返回了一个字符串，字符串为"hi,"+name+",sorry,error!"，代码如下：
+- 改造HelloService类，在hiService方法上加上@HystrixCommand注解。该注解对该方法创建了熔断器的功能，并指定了fallbackMethod熔断方法，熔断方法直接返回了一个字符串，字符串为"hi, "+name+", sorry, error"
 
 - 启动：service-ribbon 工程，当我们访问http://localhost:8764/hi?name=ywh,浏览器显示：
 > hi ywh,i am from port:8762
 
 - 此时关闭 service-hi 工程，当我们再访问http://localhost:8764/hi?name=ywh，浏览器会显示
-> hi ,ywh, orry, error
+> hi, ywh, orry, error
 
 这就说明当 service-hi 工程不可用的时候，eureka-ribbon调用 service-hi的API接口时，会执行快速失败，直接返回一组字符串，而不是等待响应超时，这很好的控制了容器的线程阻塞。
 
