@@ -1,13 +1,13 @@
-# \u7AEF\u53E3\u914D\u7F6E
+# 端口号
 server:
   port: 8761
 
-# eureka\u914D\u7F6E
+# eureka配置
 eureka:
   instance:
     hostname: localhost
   client:
-    # \u56E0\u4E3A\u672C\u9879\u76EE\u4F5C\u4E3Aeureka\u7684\u670D\u52A1\u6CE8\u518C\u4E2D\u5FC3\uFF0C\u4E0D\u7528\u6CE8\u518C\u81EA\u5DF1\uFF0C\u6240\u4EE5\u901A\u8FC7register-with-eureka: false\u8BBE\u7F6E\u81EA\u5DF1\u4E3A\u670D\u52A1\u7AEF\uFF0C\u8865\u5145\u5F53\u5BA2\u6237\u7AEF\u7684\u89D2\u8272
+    # 表明自己不是一个客户端
     register-with-eureka: false
     fetch-registry: false
     service-url:
