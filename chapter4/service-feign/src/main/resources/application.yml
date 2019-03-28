@@ -1,0 +1,14 @@
+server:
+  port: 8765
+spring:
+  application:
+    name: service-feign
+eureka:
+  client:
+    service-url:
+      url: http://localhost:8761/eureka
+
+# 要想在Feign中使用熔断必须开启这个属性
+feign:
+  hystrix:
+    enabled: true

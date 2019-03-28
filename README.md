@@ -13,7 +13,7 @@ SpringCloud学习项目,此项目主要是为了学习SpringCloud如何工作以
 
 - 第三章节：实现断路器的功能（rest+ribbon以及fegin的两个版本）
 
-- 第四章节：
+- 第四章节：实现路由网关的功能（zuul）
 
 # 参考
 

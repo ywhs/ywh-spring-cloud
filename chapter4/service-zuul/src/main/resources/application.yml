@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: service-zuul
+server:
+  port: 8769
+eureka:
+  client:
+    service-url:
+      url: http://localhost:8761/eureka
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+
+# \u4EE5\u4E0B\u5C5E\u6027\u5982\u679C\u6CE8\u91CA\u6389\uFF0C\u90A3\u4E48ribbon\u7684\u7194\u65AD\u673A\u5236\u5219\u4F1A\u5931\u6548\uFF0C\u81F3\u4E8E\u4E3A\u4EC0\u4E48\u52A0\u4E0A\u8FD9\u4E24\u5C5E\u6027\u5C31\u597D\u4E86\uFF0C\u6CA1\u641E\u61C2
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
