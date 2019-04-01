@@ -1,12 +1,12 @@
-# \u7AEF\u53E3\u53F7\u914D\u7F6E
+# 端口号
 server:
   port: 8762
-# spring\u9879\u76EE\u7684\u540D\u79F0
+# 配置应用程序名称
 spring:
   application:
     name: eureka-hi
 
-# eureka\u7684\u5BA2\u6237\u7AEF\u914D\u7F6E
+# eureka配置
 eureka:
   client:
     service-url:
