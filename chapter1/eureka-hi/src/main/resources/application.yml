@@ -6,7 +6,7 @@ spring:
   application:
     name: eureka-hi
 
-# eureka配置
+# eureka配置 客户端配置，注册到服务中心
 eureka:
   client:
     service-url:

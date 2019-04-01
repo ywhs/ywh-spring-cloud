@@ -2,7 +2,7 @@
 server:
   port: 8761
 
-# eureka配置
+# eureka配置，配置注册服务中心
 eureka:
   instance:
     hostname: localhost
@@ -12,6 +12,7 @@ eureka:
     fetch-registry: false
     service-url:
       url: http://${eureka.instance.hostname}:${server.port}/eureka/
+# 配置应用程序名称
 spring:
   application:
     name: eureka-server
