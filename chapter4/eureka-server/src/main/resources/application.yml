@@ -12,6 +12,10 @@ eureka:
     fetch-registry: false
     service-url:
       url: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    # 配置关闭自我保护，并按需配置Eureka Server清理无效节点的时间间隔。生产环境不建议关闭
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
 spring:
   application:
     name: eureka-server
