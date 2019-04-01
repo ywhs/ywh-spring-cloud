@@ -4,9 +4,9 @@
 
 spring-cloud-config的配置一定要放到bootstrap.properties文件中，当然有的属性可以放到其他配置文件中，但是为了不出错，所以规定自己一定要把所有关于config的配置信息都放到bootstrap.properties中
 ```bash
-1、configclient 服务启动后，默认会先访问bootstrap.yml，然后绑定configserver，然后获取application.yml 配置。如果仅仅在application.yml 配置了url:http://127.0.0.1:8080 这样默认会使用8888端口，（配置无效）。
-所以，
-2、我们将绑定configserver的配置属性应该放在bootstrap.yml文件里。
+1、configclient 服务启动后，默认会先访问bootstrap.yml，然后绑定configserver，然后获取application.yml 配置。
+如果仅仅在application.yml 配置了url:http://127.0.0.1:8080 这样默认会使用8888端口，（配置无效）。
+2、所以我们将绑定configserver的配置属性应该放在bootstrap.yml文件里。
 ```
 
 ### bootstrap/ application 的应用场景
@@ -188,5 +188,6 @@ spring.cloud.config.discovery.serviceId=config-server
 
 ## 参考：
 
-[史上最简单的SpringCloud教程 | 第六篇: 分布式配置中心(Spring Cloud Config)(Finchley版本)](https://blog.csdn.net/forezp/article/details/81041028)
-[史上最简单的SpringCloud教程 | 第七篇: 高可用的分布式配置中心(Spring Cloud Config)(Finchley版本)](https://blog.csdn.net/forezp/article/details/81041045)
+- [史上最简单的SpringCloud教程 | 第六篇: 分布式配置中心(Spring Cloud Config)(Finchley版本)](https://blog.csdn.net/forezp/article/details/81041028)
+
+- [史上最简单的SpringCloud教程 | 第七篇: 高可用的分布式配置中心(Spring Cloud Config)(Finchley版本)](https://blog.csdn.net/forezp/article/details/81041045)
