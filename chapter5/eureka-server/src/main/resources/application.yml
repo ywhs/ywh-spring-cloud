@@ -3,17 +3,17 @@ spring:
     name: eureka-server
 server:
   port: 8761
-# eureka\u914D\u7F6E
+# eureka配置
 eureka:
   instance:
     hostname: localhost
   client:
-    # \u8868\u660E\u81EA\u5DF1\u4E0D\u662F\u4E00\u4E2A\u5BA2\u6237\u7AEF
+    # 表明自己不是一个客户端，不进行自注册
     register-with-eureka: false
     fetch-registry: false
     service-url:
       url: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
-    # \u914D\u7F6E\u5173\u95ED\u81EA\u6211\u4FDD\u62A4\uFF0C\u5E76\u6309\u9700\u914D\u7F6EEureka Server\u6E05\u7406\u65E0\u6548\u8282\u70B9\u7684\u65F6\u95F4\u95F4\u9694\u3002\u751F\u4EA7\u73AF\u5883\u4E0D\u5EFA\u8BAE\u5173\u95ED
+    # 配置关闭自我保护，并按需配置Eureka Server清理无效节点的时间间隔。生产环境不建议关闭
     enable-self-preservation: false
-#    eviction-interval-timer-in-ms: 4000
+    eviction-interval-timer-in-ms: 4000
