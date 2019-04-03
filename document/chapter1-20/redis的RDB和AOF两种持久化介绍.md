@@ -31,8 +31,7 @@ AOF的机制只对一个AOF日志文件做写入（仅追加 append-only）操�
 如果redis挂了，服务器上的内存和磁盘上的数据都丢了，可以从云服务上拷贝回来之前的数据，放到指定的目录中，然后重新启动redis，redis就会自动根据持久化数据文件中的数据，去恢复内存中的数据，继续对外提供服务
 如果同时使用RDB和AOF两种持久化机制，那么在redis重启的时候，会使用AOF来重新构建数据，因为AOF中的数据更加完整。
 
-![完整图解](https://user-images.githubusercontent.com/34649300/55394446-e7cabe00-5571-11e9-9407-2cdc288e3177.jpg)
-
+![RDB和AOF的介绍](https://user-images.githubusercontent.com/34649300/55464789-73098980-562e-11e9-8441-626fab559aae.png)
 
 ## RDB持久化机制的优点
 
