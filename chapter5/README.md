@@ -171,7 +171,7 @@ spring.cloud.config.discovery.serviceId=config-server
 
 - 分析原因
 有可能在启动的时候把git上的配置文件全部down到了本地作为缓存，所以这时所有的config-server全部宕机还是有可能得到配置数据的
-但是在我更新数据时，尝试调用http://localhost:8882/actuator/refresh(这个是在没有加rabbitMQ的刷新地址)，控制台报错，连接config-server超时无法更新，但是还是能访问旧的数据的。
+但是在我更新数据时，尝试调用 http://localhost:8882/actuator/refresh (这个是在没有加rabbitMQ的刷新地址)，控制台报错，连接config-server超时无法更新，但是还是能访问旧的数据的。
 
 ## 遗留问题
 
