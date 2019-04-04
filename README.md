@@ -9,15 +9,17 @@ SpringCloud学习项目,此项目主要是为了学习SpringCloud如何工作以
 
 每一章节中都有各自的md笔记，记录着当前章节实现的是什么功能
 
-- 第一章节：实现了服务的注册与发现
+- 第一章节：[实现了服务的注册与发现](https://github.com/ywhs/YwhSpringCloud/tree/master/chapter1)
 
-- 第二章节：实现服务之间的调用（rest+ribbon以及fegin的两个版本）
+- 第二章节：[实现服务之间的调用（rest+ribbon以及fegin的两个版本）](https://github.com/ywhs/YwhSpringCloud/tree/master/chapter2)
 
-- 第三章节：实现断路器的功能（rest+ribbon以及fegin的两个版本）
+- 第三章节：[实现断路器的功能（rest+ribbon以及fegin的两个版本）](https://github.com/ywhs/YwhSpringCloud/tree/master/chapter3)
 
-- 第四章节：实现路由网关的功能（zuul）
+- 第四章节：[实现路由网关的功能（zuul）](https://github.com/ywhs/YwhSpringCloud/tree/master/chapter4)
 
-- 第五章节：实现spring-cloud-config配置服务（高可用）
+- 第五章节：[实现spring-cloud-config配置服务（高可用）](https://github.com/ywhs/YwhSpringCloud/tree/master/chapter5)
+
+- 更多学习笔记：[document](https://github.com/ywhs/YwhSpringCloud/tree/master/document)
 
 # 参考
 
