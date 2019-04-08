@@ -82,8 +82,7 @@ $ vi /etc/redis/6379.conf
 save 5 1
 # 表明每5秒检查一次，只有有一条插入的数据就生成快照文件rdb，即保存了数据。
 $ redis-cli SHUTDOWN
-$ cd /etc/init.d
-$ ./redis_6379 start
+$ /etc/init.d/redis_6379 start
 # 重复实验2的步骤，插入新的数据
 ```
 
@@ -125,15 +124,15 @@ AOF持久化，默认是关闭的，默认是打开RDB持久化
 $ vi /etc/redis/6379.conf
 appendonly yes
 $ redis-cli SHUTDOWN
-$ cd /etc/init.d
-$ ./redis_6379 start
+$ /etc/init.d/redis_6379 start
 $ redis-cli
 $ set mykey1 k1
 $ set mykey2 k2
 $ exit
 $ ps -ef | grep redis
 $ kill -9 32523
-$ ./redis_6379 start
+$ rm -rf /var/run/redis_6379.pid
+$ /etc/init.d/redis_6379 start
 $ redis-cli
 $ get mykey1
 "k1"
