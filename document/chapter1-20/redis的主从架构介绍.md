@@ -142,7 +142,7 @@ master 默认每隔 10秒 发送一次 heartbeat，slave node 每隔 1秒 发送
 
 另外，master 的各种备份方案，也需要做。万一本地的所有文件丢失了，从备份中挑选一份 rdb 去恢复 master，这样才能确保启动的时候，是有数据的
 即使采用了后续讲解的高可用机制，slave node可以自动接管master node，但是也可能sentinal还没有检测到master failure，master node就自动重启了，
-还是可能导致上面的所有slave node数据清空故障
+还是可能导致上面的所有slave node数据清空故障。
 
 
 ## 扩展阅读
