@@ -20,4 +20,5 @@
 
 - [redis企业级数据备份方案以及数据恢复容灾演练](https://github.com/ywhs/YwhSpringCloud/blob/master/document/chapter1-20/redis%E4%BC%81%E4%B8%9A%E7%BA%A7%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88%E4%BB%A5%E5%8F%8A%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%AE%B9%E7%81%BE%E6%BC%94%E7%BB%83.md)
 
+- [redis的主从架构介绍及实现](https://github.com/ywhs/ywh-spring-cloud/blob/master/document/chapter1-20/redis%E7%9A%84%E4%B8%BB%E4%BB%8E%E6%9E%B6%E6%9E%84%E4%BB%8B%E7%BB%8D%E5%8F%8A%E5%AE%9E%E7%8E%B0.md)
 
