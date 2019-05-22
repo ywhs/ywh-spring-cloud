@@ -1,0 +1,30 @@
+# 端口号
+server:
+  port: 9762
+# spring项目名称
+spring:
+  application:
+    name: eureka-hi
+  profiles:
+    active: dev,redis
+  # 配置服务链路追踪
+  sleuth:
+    web:
+      client:
+        enabled: true
+    # 设置采样比例为1.0
+    sampler:
+      probability: 1.0
+  # 指定zipkin的服务器地址
+  zipkin:
+    base-url: http://localhost:9411/
+
+# eureka 配置
+eureka:
+  client:
+    service-url:
+      # 可以取别的名字，但是没有必要，必须使用defaultZone
+      defaultZone: http://localhost:9761/eureka/
+logging:
+  level:
+    com.ywh.eurekahi.dao: debug

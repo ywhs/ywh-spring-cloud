@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: service-zuul
+  # 配置服务链路追踪
+  sleuth:
+    web:
+      client:
+        enabled: true
+    # 设置采样比例为1.0
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411/
+server:
+  port: 9769
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: service-feign
+
+#
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000

@@ -1,0 +1,25 @@
+server:
+  port: 9765
+spring:
+  application:
+    name: service-feign
+  # 配置服务链路追踪
+  sleuth:
+    web:
+      client:
+        enabled: true
+    # 设置采样比例为1.0
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411/
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka
+
+# 要想在Feign中使用熔断必须开启这个属性
+feign:
+  hystrix:
+    enabled: true
